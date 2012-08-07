@@ -49,6 +49,7 @@ int ConnectionOpen(char* ip_, char* port_)
 
 status_ Configuration(char *command)
 {
+    
     status_ estado;
     char cmd[strlen(command)+1];
     strcpy(cmd,command);
@@ -73,6 +74,7 @@ status_ Query(char *command)
     char cmd[strlen(command)+1];
     strcpy(cmd,command);
     n= write(sockfd,cmd,strlen(cmd));
+    sleep(1); //Espera para poder cumplir las reglas de ejecucion de comandos.
     if(readable_timeo(sockfd,2)>0)
     { 
         if (n < 0) 
@@ -83,6 +85,7 @@ status_ Query(char *command)
         
         bzero(buffer,400);
         n= read(sockfd,buffer,399);
+        
         if (n < 0) 
         { estado.code=ERROR_READING_FROM_SOCKET;
           estado.description="ERROR_READING_FROM_SOCKET";

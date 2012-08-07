@@ -44,6 +44,7 @@ status_ Query(char *command);
 void sendText();
 void InitRemote();
 void StopRemote();
+
 #ifdef	__cplusplus
 }
 #endif

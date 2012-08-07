@@ -9,6 +9,12 @@
       <itemPath>Configure.h</itemPath>
       <itemPath>IEEE488Interface.h</itemPath>
       <itemPath>MathFunctions.h</itemPath>
+      <itemPath>Measure.h</itemPath>
+      <itemPath>MeasureConfiguration.h</itemPath>
+      <itemPath>RS232Interface.h</itemPath>
+      <itemPath>StatusReporting.h</itemPath>
+      <itemPath>SystemRelated.h</itemPath>
+      <itemPath>Triggering.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -22,6 +28,12 @@
       <itemPath>Configure.c</itemPath>
       <itemPath>IEEE488Interface.c</itemPath>
       <itemPath>MathFunctions.c</itemPath>
+      <itemPath>Measure.c</itemPath>
+      <itemPath>MeasureConfiguration.c</itemPath>
+      <itemPath>RS232Interface.c</itemPath>
+      <itemPath>StatusReporting.c</itemPath>
+      <itemPath>SystemRelated.c</itemPath>
+      <itemPath>Triggering.c</itemPath>
       <itemPath>main.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"

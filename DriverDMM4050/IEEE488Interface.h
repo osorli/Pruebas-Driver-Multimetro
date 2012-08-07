@@ -15,7 +15,7 @@ extern "C" {
 #include "Conexion.h"
     
 status_ setClearStatus();
-status_ getStandardEventEnableRegister();
+status_ getStandardEventEnableRegister_();
 status_ getStandardEventRegister_Error();
 status_ getMeterIdentificationString();
 status_ getOperationCompleteStatus();
@@ -23,9 +23,9 @@ status_ setOperationCompleteBit();
 status_ setPowerOnStatusClear(int bit_);
 status_ getPowerOnStatusClearSetting();
 status_ setResetMeter();
-status_ setBitsStatusByteRegister(int bit_);
-status_ getBitsStatusByteRegister();
-status_ getStatusByteSummaryRegister();
+status_ setBitsStatusByteRegister_(int bit_);
+status_ getBitsStatusByteRegister_();
+status_ getStatusByteSummaryRegister_();
 status_ getSelfTestStatus();
 
 #ifdef	__cplusplus

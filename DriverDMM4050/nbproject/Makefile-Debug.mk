@@ -35,10 +35,16 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/IEEE488Interface.o \
+	${OBJECTDIR}/MeasureConfiguration.o \
+	${OBJECTDIR}/Triggering.o \
+	${OBJECTDIR}/SystemRelated.o \
 	${OBJECTDIR}/Calibration.o \
+	${OBJECTDIR}/Measure.o \
 	${OBJECTDIR}/Conexion.o \
-	${OBJECTDIR}/MathFunctions.o \
 	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/MathFunctions.o \
+	${OBJECTDIR}/RS232Interface.o \
+	${OBJECTDIR}/StatusReporting.o \
 	${OBJECTDIR}/Configure.o
 
 
@@ -71,25 +77,55 @@ ${OBJECTDIR}/IEEE488Interface.o: IEEE488Interface.c
 	${RM} $@.d
 	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/IEEE488Interface.o IEEE488Interface.c
 
+${OBJECTDIR}/MeasureConfiguration.o: MeasureConfiguration.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/MeasureConfiguration.o MeasureConfiguration.c
+
+${OBJECTDIR}/Triggering.o: Triggering.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Triggering.o Triggering.c
+
+${OBJECTDIR}/SystemRelated.o: SystemRelated.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/SystemRelated.o SystemRelated.c
+
 ${OBJECTDIR}/Calibration.o: Calibration.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Calibration.o Calibration.c
+
+${OBJECTDIR}/Measure.o: Measure.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Measure.o Measure.c
 
 ${OBJECTDIR}/Conexion.o: Conexion.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Conexion.o Conexion.c
 
+${OBJECTDIR}/main.o: main.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.c
+
 ${OBJECTDIR}/MathFunctions.o: MathFunctions.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/MathFunctions.o MathFunctions.c
 
-${OBJECTDIR}/main.o: main.c 
+${OBJECTDIR}/RS232Interface.o: RS232Interface.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.c
+	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/RS232Interface.o RS232Interface.c
+
+${OBJECTDIR}/StatusReporting.o: StatusReporting.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/StatusReporting.o StatusReporting.c
 
 ${OBJECTDIR}/Configure.o: Configure.c 
 	${MKDIR} -p ${OBJECTDIR}

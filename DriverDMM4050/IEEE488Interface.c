@@ -9,7 +9,7 @@ status_ setClearStatus()
 
 //Querys
 
-status_ getStandardEventEnableRegister()
+status_ getStandardEventEnableRegister_()
 {
     char query1[10];
     snprintf(query1,sizeof(query1),"*ESE?\n");
@@ -20,13 +20,6 @@ status_ getStandardEventRegister_Error()
 {
     char query1[10];
     snprintf(query1,sizeof(query1),"*ESR?\n");
-    return Query(query1);
-}
-
-status_ getMeterIdentificationString()
-{
-    char query1[10];
-    snprintf(query1,sizeof(query1),"*IDN?\n");
     return Query(query1);
 }
 
@@ -58,28 +51,21 @@ status_ getPowerOnStatusClearSetting()
     return Query(query1);
 }
 
-status_ setResetMeter()
-{
-    char query1[10];
-    snprintf(query1,sizeof(query1),"*RST\n");
-    return Configuration(query1);
-}
-
-status_ setBitsStatusByteRegister(int bit_)
+status_ setBitsStatusByteRegister_(int bit_)
 {
     char query1[30];
     snprintf(query1,sizeof(query1),"*SRE %d\n",bit_);
     return Configuration(query1);
 }
 
-status_ getBitsStatusByteRegister()
+status_ getBitsStatusByteRegister_()
 {
     char query1[10];
     snprintf(query1,sizeof(query1),"*SRE?\n");
     return Query(query1);
 }
 
-status_ getStatusByteSummaryRegister()
+status_ getStatusByteSummaryRegister_()
 {
     char query1[10];
     snprintf(query1,sizeof(query1),"*STB?\n");

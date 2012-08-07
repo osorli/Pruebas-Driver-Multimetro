@@ -21,10 +21,23 @@ status_ setOffsetValueForZeroFunction(int value_);
 status_ setOffsetValueForZeroFunction_MIN();
 status_ setOffsetValueForZeroFunction_MAX();
 status_ getOffsetRegisterValueForZeroFunction();
-status_ setStoreRelativeValueRegister(int value_);
-status_ getStoreRelativeValueRegister();
-status_ getStoreRelativeValueRegister_MIN();
-status_ getStoreRelativeValueRegister_MAX();
+status_ getOffsetRegisterValueForZeroFunction_MIN();
+status_ getOffsetRegisterValueForZeroFunction_MAX();
+
+status_ setStoreRelativeValueRegisterDB(int value_);
+status_ setStoreRelativeValueRegisterDB_MIN();
+status_ setStoreRelativeValueRegisterDB_MAX();
+status_ getStoreRelativeValueRegisterDB();
+status_ getStoreRelativeValueRegisterDB_MIN();
+status_ getStoreRelativeValueRegisterDB_MAX();
+
+status_ setDBmReferenceValue(int value_);
+status_ setDBmReferenceValue_MIN();
+status_ setDBmReferenceValue_MAX();
+status_ getDBmReferenceValue();
+status_ getDBmReferenceValue_MIN();
+status_ gettDBmReferenceValuer_MAX();
+
 status_ setLowerLimitForLimitTesting(int value_);
 status_ setLowerLimitForLimitTesting_MIN();
 status_ setLowerLimitForLimitTesting_MAX();

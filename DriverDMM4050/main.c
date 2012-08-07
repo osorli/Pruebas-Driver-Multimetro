@@ -4,6 +4,8 @@
 #include "Configure.h"
 #include "Calibration.h"
 #include "MathFunctions.h"
+#include "Measure.h"
+#include "MeasureConfiguration.h"
 
 int main(int argc, char** argv) {
 
@@ -13,12 +15,16 @@ int main(int argc, char** argv) {
     else
     {
       InitRemote();
-      printf("Fecha de Calibracion: %s\n", getCalibrationDate().description); 
+      setFunctionCapacitance();
+      
+      //printf("Resistencia: %s\n", getMeasurementCapacitanceValueRange_Resolution(1,3).description);
+      
+     /* printf("Fecha de Calibracion: %s\n", getCalibrationDate().description); 
       sendText();
       printf("Resistencia actual: %s\n", getMeasureCurrentResistence().description);
       printf("Promedio de mediciones: %s\n", getAverageValue().description);
+      setVoltageAC_range_resolution(2,0.001);
       
-      /*
       setMathFunctionStateON();
       setMathFunctionAVERAGEmode();
       if((setVoltageAC_range_resolution(2,0.001).code)==SUCCESSFUL)

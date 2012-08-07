@@ -63,34 +63,106 @@ status_ getOffsetRegisterValueForZeroFunction()
 {
     char query1[30];
     snprintf(query1,sizeof(query1),"CALC:NULL:OFFS?\n");
-    return Configuration(query1);
+    return Query(query1);
 }
 
-status_ setStoreRelativeValueRegister(int value_)
+status_ getOffsetRegisterValueForZeroFunction_MIN()
+{
+    char query1[30];
+    snprintf(query1,sizeof(query1),"CALC:NULL:OFFS? MIN\n");
+    return Query(query1);
+}
+
+status_ getOffsetRegisterValueForZeroFunction_MAX()
+{
+    char query1[30];
+    snprintf(query1,sizeof(query1),"CALC:NULL:OFFS? MAX\n");
+    return Query(query1);
+}
+
+//DB
+status_ setStoreRelativeValueRegisterDB(int value_)
 {
     char query1[60];
     snprintf(query1,sizeof(query1),"CALC:DB:REF %d\n",value_);
     return Configuration(query1);
 }
 
-status_ getStoreRelativeValueRegister()
+status_ setStoreRelativeValueRegisterDB_MIN()
+{
+    char query1[60];
+    snprintf(query1,sizeof(query1),"CALC:DB:REF MIN\n");
+    return Configuration(query1);
+}
+
+status_ setStoreRelativeValueRegisterDB_MAX()
+{
+    char query1[60];
+    snprintf(query1,sizeof(query1),"CALC:DB:REF MAX\n");
+    return Configuration(query1);
+}
+
+status_ getStoreRelativeValueRegisterDB()
 {
     char query1[50];
     snprintf(query1,sizeof(query1),"CALC:DB:REF?\n");
     return Query(query1);
 }
 
-status_ getStoreRelativeValueRegister_MIN()
+status_ getStoreRelativeValueRegisterDB_MIN()
 {
     char query1[50];
     snprintf(query1,sizeof(query1),"CALC:DB:REF? MIN\n");
     return Query(query1);
 }
 
-status_ getStoreRelativeValueRegister_MAX()
+status_ getStoreRelativeValueRegisterDB_MAX()
 {
     char query1[50];
     snprintf(query1,sizeof(query1),"CALC:DB:REF? MAX\n");
+    return Query(query1);
+}
+
+
+status_ setDBmReferenceValue(int value_)
+{
+    char query1[60];
+    snprintf(query1,sizeof(query1),"CALC:DBM:REF %d\n",value_);
+    return Configuration(query1);
+}
+
+status_ setDBmReferenceValue_MIN()
+{
+    char query1[60];
+    snprintf(query1,sizeof(query1),"CALC:DBM:REF MIN\n");
+    return Configuration(query1);
+}
+
+status_ setDBmReferenceValue_MAX()
+{
+    char query1[60];
+    snprintf(query1,sizeof(query1),"CALC:DBM:REF MAX\n");
+    return Configuration(query1);
+}
+
+status_ getDBmReferenceValue()
+{
+    char query1[50];
+    snprintf(query1,sizeof(query1),"CALC:DBM:REF?\n");
+    return Query(query1);
+}
+
+status_ getDBmReferenceValue_MIN()
+{
+    char query1[50];
+    snprintf(query1,sizeof(query1),"CALC:DBMREF? MIN\n");
+    return Query(query1);
+}
+
+status_ gettDBmReferenceValuer_MAX()
+{
+    char query1[50];
+    snprintf(query1,sizeof(query1),"CALC:DBM:REF? MAX\n");
     return Query(query1);
 }
 
